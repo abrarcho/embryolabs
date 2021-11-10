@@ -1,0 +1,253 @@
+:root {
+  --color-accent-1: #C54111;
+  --color-black: black;
+  --color-white: white;
+}
+
+@font-face {
+  font-family: Monda;
+  src: local("Monda Regular"), url("../fonts/Monda-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Monda;
+  src: local("Monda Bold"), url("../fonts/Monda-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+::-webkit-scrollbar {
+  --size: .7rem;
+  width: var(--size);
+  height: var(--size);
+  overflow: visible;
+}
+
+::-webkit-scrollbar-thumb {
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9a553c;
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--color-accent-1);
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: Monda, sans-serif;
+  font-size: 62.5%;
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+body {
+  width: 100%;
+  background-color: var(--color-black);
+  color: var(--color-accent-1);
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  padding: 1.5rem;
+  z-index: 1;
+  background-color: inherit;
+  font-size: 2rem;
+}
+nav .logo {
+  position: absolute;
+  left: 0;
+  padding: inherit;
+}
+nav .nav-menu {
+  display: flex;
+  list-style: none;
+}
+nav .nav-menu .menu-item.active a {
+  color: inherit;
+}
+nav .nav-menu .menu-item:not(:last-child) {
+  margin-right: 2rem;
+}
+nav .nav-menu .menu-item a {
+  color: #a55031;
+}
+nav .nav-menu .menu-item a::after {
+  content: "";
+  display: block;
+  background-color: var(--color-accent-1);
+  width: 0;
+  height: 0.3rem;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-property: width;
+}
+nav .nav-menu .menu-item a:hover::after {
+  width: 100%;
+}
+
+.heading-primary {
+  font-weight: 700;
+  font-size: 4.4rem;
+}
+
+.heading-secondary {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  font-size: 1.2rem;
+}
+footer .social-icons > *:not(:last-child) {
+  margin-right: 2.5rem;
+}
+footer .social-icons svg {
+  --size: 2rem;
+  height: var(--size);
+  width: var(--size);
+  fill: currentColor;
+}
+
+/*------------------ Index Page --------------------*/
+body#index {
+  height: 3000px;
+}
+
+.percentage-box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+}
+
+.images > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  padding: 0 10%;
+}
+
+footer.index {
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+}
+
+/*------------------ Mission Page --------------------*/
+section.image-background {
+  width: 100%;
+  position: relative;
+}
+section.image-background .background {
+  position: static;
+  width: 100%;
+}
+section.image-background .background img {
+  width: 100%;
+  vertical-align: middle;
+}
+section.image-background .content {
+  font-weight: 700;
+  font-size: 2.4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 16rem;
+}
+
+/*------------------ SmartGrinder Page --------------------*/
+section.image-slide {
+  width: 100%;
+  position: relative;
+}
+section.image-slide .background {
+  position: static;
+  width: 100%;
+}
+section.image-slide .background img {
+  width: 100%;
+  vertical-align: middle;
+}
+section.image-slide .top, section.image-slide .bottom {
+  position: absolute;
+  left: 0;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+section.image-slide .top {
+  top: 0;
+}
+section.image-slide .bottom {
+  bottom: 0;
+}
+section.image-slide .content {
+  font-weight: 700;
+  font-size: 2.4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 16rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

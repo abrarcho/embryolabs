@@ -1,0 +1,54 @@
+::-webkit-scrollbar
+{
+    --size: .7rem;
+    width: var(--size);
+    height: var(--size);
+    overflow: visible;
+    background-color: #000000;
+}
+::-webkit-scrollbar-thumb
+{
+    opacity: 100;
+    background-color: #a55031;
+    border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background-color: #ff4400;
+}
+::-webkit-scrollbar-thumb:active
+{
+    background-color: #ff4400;
+}
+::-webkit-scrollbar-track
+{
+    background-color: transparent;
+}
+html, body
+{
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+@font-face
+{
+    font-family: 'Monda';
+    src: local("Monda Bold"), url("assets/fonts/Monda-Bold.ttf") format("truetype");
+}
+.text
+{
+    font-family: 'Monda';
+}
+.background
+{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    background-size: cover;
+}
+.top
+{
+    background-color: #000000;
+    height: 100%;
+}
